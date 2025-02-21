@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  
+  <div id="landing-screen" class="screen">
+    <h1>Welcome to Rock Paper Scissors!</h1>
+    <div class="button-container">
+      <button id="start-btn">Play</button>
+      <button id="landing-quit-btn">Quit</button>
+    </div>
+  </div>
+
+
+  
+  <div id="game-screen" class="screen" style="display: none;">
+    <div class="scoreboard">
+      <div>Total Games: <span id="total-games">0</span></div>
+      <div>Wins: <span id="wins">0</span></div>
+      <div>Losses: <span id="losses">0</span></div>
+      <div>Draws: <span id="draws">0</span></div>
+    </div>
+
+    <h2>Choose your move:</h2>
+    <div class="game-buttons">
+      <button id="stone-btn" onclick="playRound(0)">
+        <img src="https://img.icons8.com/color/96/000000/hand-rock.png" alt="Stone">
+      </button>
+      <button id="paper-btn" onclick="playRound(1)">
+        <img src="https://img.icons8.com/color/96/000000/hand.png" alt="Paper">
+      </button>
+      <button id="scissor-btn" onclick="playRound(2)">
+        <img src="https://img.icons8.com/color/96/000000/hand-scissors.png" alt="Scissor">
+      </button>
+    </div>
+
+    <div id="result-area" class="result-area"></div>
+    <button id="game-quit-btn" onclick="quitGame()">Quit</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
